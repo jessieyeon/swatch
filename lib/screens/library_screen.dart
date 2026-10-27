@@ -1,11 +1,16 @@
-// S-1 보관함 (홈)
-// │ S1-1 │ SearchBar                         │ 보관함 검색       │ P06 │
-// │ S1-2 │ FilterChip 목록                    │ 태그 칩           │ P06 │
-// │ S1-3 │ GridView + Card                    │ 레퍼런스 카드      │ P08 │
-// │ S1-4 │ 길게 누르기 + 체크 표시             │ 선택 모드         │ P07 │
-// │ S1-5 │ BottomAppBar                      │ 정리 액션바        │ P07 · P03 │
-// │ S1-6 │ LoadingView · ErrorView · EmptyView │ 3상태            │ P01 · P09 │
-// │ S1-7 │ FloatingActionButton              │ 레퍼런스 저장 (+)  │ — │
+// S-1 보관함 (홈) — 요소 번호는 docs/디자인가이드.md와 같다
+// │ S1-1  │ TextField (검색)                    │ 보관함 검색          │ P06 │
+// │ S1-2  │ FilterChip 목록                      │ 태그 칩              │ P06 │
+// │ S1-3  │ GridView + Card                      │ 레퍼런스 카드         │ P08 · P06 │
+// │ S1-4  │ Card 길게 누르기 + CircleAvatar 체크   │ 선택 모드            │ P07 │
+// │ S1-5  │ BottomAppBar + TextButton            │ 정리 액션바           │ P07 · P03 │
+// │ S1-6  │ CircularProgressIndicator · ErrorView · EmptyView │ 3상태 │ P01 · P09 │
+// │ S1-7  │ FloatingActionButton                 │ 레퍼런스 저장 (+)     │ P07 │
+// │ S1-8  │ AppBar                               │ 보관함 제목 줄 · 선택 제목 줄 │ P01 · P03 │
+// │ S1-9  │ BottomSheet + ListTile               │ 보드로 옮기기 시트     │ P06 │
+// │ S1-10 │ AlertDialog                          │ 삭제 확인             │ P05 │
+// │ S1-11 │ LayoutBuilder + Row                  │ 상세 2단 (넓은 화면)   │ P06 · P07 │
+// │ S1-12 │ SnackBar                             │ 결과 알림 (임의 결과)  │ P01 │
 import 'package:flutter/material.dart';
 
 import '../api.dart';
@@ -75,7 +80,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
     }
   }
 
-  // S1-5 보드로 옮기기 — 보드 목록(GET /boards)에서 고르면 SnackBar로만 결과를 보여 준다 (임의 결과)
+  // S1-9 보드로 옮기기 시트 — 보드 목록(GET /boards)에서 고르면 SnackBar로만 결과를 보여 준다 (임의 결과)
   Future<void> _moveToBoard() async {
     final count = _selected.length;
     final board = await showModalBottomSheet<Board>(
@@ -120,7 +125,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
     showDemoSnackBar(context, '$count개를 ‘${board.name}’ 보드로 옮겼어요 (데모 — 실제로 저장하지 않음)');
   }
 
-  // S1-5 삭제 — 확인 대화상자 후 SnackBar로만 결과를 보여 준다 (P03 · P05)
+  // S1-10 삭제 확인 — 확인 대화상자 후 SnackBar로만 결과를 보여 준다 (P03 · P05)
   Future<void> _delete() async {
     final count = _selected.length;
     final ok = await showDialog<bool>(
@@ -152,6 +157,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
       final list = _buildList(wide);
       return Scaffold(
         appBar: _selecting
+            // S1-8 제목 줄 — 선택 모드에서는 선택 개수와 취소 버튼 (P01 · P03)
             ? AppBar(
                 leading: IconButton(
                   icon: const Icon(Icons.close),
@@ -161,6 +167,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 title: Text('${_selected.length}개 선택'),
               )
             : AppBar(title: const Text('보관함')),
+        // S1-11 상세 2단 (넓은 화면)
         body: wide
             ? Row(
                 children: [
@@ -217,18 +224,24 @@ class _LibraryScreenState extends State<LibraryScreen> {
         // S1-1 보관함 검색 — P06 이미지 대신 이유 · 태그로 찾는다
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
-          child: SearchBar(
+          child: TextField(
             controller: _searchController,
-            hintText: '저장 이유나 태그로 찾기 (예: 여백, 그리드)',
-            leading: const Icon(Icons.search),
+            textInputAction: TextInputAction.search,
             onSubmitted: _openSearch,
-            trailing: [
-              IconButton(
+            decoration: InputDecoration(
+              hintText: '저장 이유나 태그로 찾기 (예: 여백, 그리드)',
+              prefixIcon: const Icon(Icons.search),
+              suffixIcon: IconButton(
                 tooltip: '검색',
                 icon: const Icon(Icons.arrow_forward),
                 onPressed: () => _openSearch(_searchController.text),
               ),
-            ],
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(28),
+                borderSide: BorderSide.none,
+              ),
+            ),
           ),
         ),
         // S1-2 태그 칩 — P06 태그를 기억하지 않고 고른다

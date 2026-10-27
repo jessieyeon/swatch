@@ -1,9 +1,10 @@
-// S-3 저장 시트 — 덮기(showModalBottomSheet)
-// │ S3-1 │ TextField     │ 저장 이유 한 줄          │ P06 │
-// │ S3-2 │ FilterChip    │ 태그 고르기              │ P06 │
-// │ S3-3 │ ChoiceChip    │ 보드 고르기 (전체 목록)   │ P06 │
-// │ S3-4 │ FilledButton  │ 저장 → SnackBar (임의 결과) │ P01 │
-// 실제 저장(POST · 영구 저장)은 하지 않는다.
+// S-3 저장 시트 — 덮기(showModalBottomSheet). 실제 저장(POST · 영구 저장)은 하지 않는다.
+// │ S3-1 │ OutlinedButton │ 이미지 또는 링크 추가     │ P02 │
+// │ S3-2 │ TextField      │ 저장 이유 한 줄          │ P06 │
+// │ S3-3 │ FilterChip     │ 태그 고르기              │ P06 │
+// │ S3-4 │ FilterChip     │ 보드 고르기 (전체 목록)   │ P06 │
+// │ S3-5 │ FilledButton   │ 저장 → SnackBar (임의 결과) │ P01 │
+// │ S3-6 │ CircularProgressIndicator · ErrorView │ 불러오는 중 · 실패 │ P01 · P09 │
 import 'package:flutter/material.dart';
 
 import '../api.dart';
@@ -32,7 +33,7 @@ class SaveSheet extends StatefulWidget {
 class _SaveSheetState extends State<SaveSheet> {
   late Future<(List<Board>, List<String>)> _future = _load();
 
-  // STATE: 입력한 이유 · 고른 태그 · 고른 보드 → 저장 버튼(S3-4) — v2 이후 상태관리로 구현 (지금은 표시만)
+  // STATE: 입력한 이유 · 고른 태그 · 고른 보드 → 저장 버튼(S3-5) — v2 이후 상태관리로 구현 (지금은 표시만)
   final _reason = TextEditingController();
   final Set<String> _tags = {};
   String? _boardId;
@@ -79,14 +80,14 @@ class _SaveSheetState extends State<SaveSheet> {
               children: [
                 Text('레퍼런스 저장', style: t.titleLarge),
                 const SizedBox(height: 16),
-                // 저장할 이미지 자리 — 사진 선택은 화면만 (실제 업로드 없음)
+                // S3-1 이미지 또는 링크 추가 — 사진 선택은 화면만 (실제 업로드 없음)
                 OutlinedButton.icon(
                   onPressed: () => showDemoSnackBar(context, '사진 고르기는 데모에서 화면만 보여 줘요'),
                   icon: const Icon(Icons.add_photo_alternate_outlined),
                   label: const Text('이미지 또는 링크 추가'),
                 ),
                 const SizedBox(height: 16),
-                // S3-1 저장 이유 한 줄 — P06 저장하는 순간에 이유를 남긴다
+                // S3-2 저장 이유 한 줄 — P06 저장하는 순간에 이유를 남긴다
                 TextField(
                   controller: _reason,
                   maxLength: 80,
@@ -98,7 +99,7 @@ class _SaveSheetState extends State<SaveSheet> {
                   ),
                 ),
                 const SizedBox(height: 12),
-                // S3-2 태그 고르기
+                // S3-3 태그 고르기
                 Text('태그', style: t.labelLarge),
                 const SizedBox(height: 8),
                 Wrap(
@@ -114,7 +115,7 @@ class _SaveSheetState extends State<SaveSheet> {
                   ],
                 ),
                 const SizedBox(height: 16),
-                // S3-3 보드 고르기 — 최근 2개가 아니라 전체 목록 (P06)
+                // S3-4 보드 고르기 — 최근 2개가 아니라 전체 목록 (P06)
                 Text('보드', style: t.labelLarge),
                 const SizedBox(height: 8),
                 Wrap(
@@ -122,15 +123,16 @@ class _SaveSheetState extends State<SaveSheet> {
                   runSpacing: 8,
                   children: [
                     for (final b in boards)
-                      ChoiceChip(
+                      FilterChip(
                         label: Text(b.name),
                         selected: _boardId == b.id,
+                        showCheckmark: false,
                         onSelected: (_) => setState(() => _boardId = b.id),
                       ),
                   ],
                 ),
                 const SizedBox(height: 24),
-                // S3-4 저장 — 결과는 SnackBar로만 (P01)
+                // S3-5 저장 — 결과는 SnackBar로만 (P01)
                 SizedBox(
                   width: double.infinity,
                   child: FilledButton(

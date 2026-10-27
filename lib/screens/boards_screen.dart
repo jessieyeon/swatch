@@ -1,4 +1,7 @@
-// S-4 보드 목록 (탭) — GET /boards · 로딩 · 오류 · 빈 상태
+// S-4 보드 목록 (탭) — GET /boards
+// │ S4-1 │ AppBar          │ 보드 제목 줄    │ P04 │
+// │ S4-2 │ GridView + Card │ 보드 카드       │ P02 · P06 │
+// │ S4-3 │ CircularProgressIndicator · ErrorView · EmptyView │ 3상태 │ P01 · P09 │
 import 'package:flutter/material.dart';
 
 import '../api.dart';

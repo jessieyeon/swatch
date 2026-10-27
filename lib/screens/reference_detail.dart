@@ -1,8 +1,10 @@
 // S-2 레퍼런스 상세 — 좁은 화면은 쌓기(push), 넓은 화면은 보관함 오른쪽 2단
-// │ S2-1 │ Image        │ 레퍼런스 이미지        │ —   │
-// │ S2-2 │ Card         │ 저장 이유             │ P06 │
-// │ S2-3 │ Wrap + Chip  │ 태그                  │ P06 │
-// │ S2-4 │ ListTile     │ 출처 · 보드 · 저장일   │ P02 │
+// │ S2-1 │ Image        │ 레퍼런스 이미지   │ —   │
+// │ S2-2 │ Text         │ 레퍼런스 제목     │ P04 │
+// │ S2-3 │ Card         │ 저장 이유        │ P06 │
+// │ S2-4 │ Wrap + Chip  │ 태그             │ P06 │
+// │ S2-5 │ ListTile     │ 출처             │ P02 │
+// │ S2-6 │ ListTile     │ 저장한 날         │ P02 │
 import 'package:flutter/material.dart';
 
 import '../models.dart';
@@ -47,9 +49,9 @@ class ReferenceDetail extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Text(reference.title, style: t.titleLarge),
+        Text(reference.title, style: t.titleLarge), // S2-2
         const SizedBox(height: 12),
-        // S2-2 저장 이유 — P06 왜 저장했는지 이미지 바로 아래에서 보인다
+        // S2-3 저장 이유 — P06 왜 저장했는지 이미지 바로 아래에서 보인다
         Card(
           elevation: 0,
           color: scheme.primaryContainer,
@@ -74,14 +76,14 @@ class ReferenceDetail extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        // S2-3 태그
+        // S2-4 태그
         Wrap(
           spacing: 8,
           runSpacing: 8,
           children: [for (final tag in reference.tags) Chip(label: Text('#$tag'))],
         ),
         const SizedBox(height: 8),
-        // S2-4 출처 · 보드 · 저장일
+        // S2-5 출처 · S2-6 저장한 날
         ListTile(
           contentPadding: EdgeInsets.zero,
           leading: const Icon(Icons.link),

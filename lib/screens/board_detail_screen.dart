@@ -1,4 +1,8 @@
-// S-5 보드 상세 (쌓기) — GET /references?boardId= · 로딩 · 오류 · 빈 상태
+// S-5 보드 상세 (쌓기) — GET /references?boardId=
+// │ S5-1 │ AppBar                   │ 보드 이름 제목 줄       │ P01 │
+// │ S5-2 │ GridView + Card          │ 레퍼런스 카드 (S1-3과 같음) │ P04 · P08 │
+// │ S5-3 │ EmptyView + FilledButton │ 빈 보드 안내 + 저장     │ P01 · P09 │
+// │ S5-4 │ CircularProgressIndicator · ErrorView │ 불러오는 중 · 실패 │ P01 · P09 │
 import 'package:flutter/material.dart';
 
 import '../api.dart';

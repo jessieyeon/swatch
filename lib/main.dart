@@ -32,7 +32,7 @@ class SwatchApp extends StatelessWidget {
   }
 }
 
-/// 탭 뼈대 — 창 너비 840 이상이면 NavigationRail, 좁으면 NavigationBar (적응형)
+/// 탭 뼈대 — A-1 NavigationBar(폰) · A-2 NavigationRail(창 너비 840 이상) (적응형, P04)
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
 
