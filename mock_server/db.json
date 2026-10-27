@@ -1,0 +1,222 @@
+{
+  "references": [
+    {
+      "id": "r1",
+      "title": "굵은 산세리프 히어로",
+      "source": "포스터",
+      "imageUrl": "https://picsum.photos/seed/swatch-r1/600/800",
+      "reason": "제목 하나만 크게 두고 나머지를 과감히 비운 여백이 좋다. 랜딩 첫 화면에 그대로 쓰고 싶다.",
+      "tags": [
+        "타이포그래피",
+        "레이아웃",
+        "웹"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-10-20"
+    },
+    {
+      "id": "r2",
+      "title": "12단 그리드 포트폴리오",
+      "source": "웹",
+      "imageUrl": "https://picsum.photos/seed/swatch-r2/600/800",
+      "reason": "카드 간격이 12단 그리드에 정확히 맞아 정돈돼 보인다. 프로젝트 목록 배치 참고.",
+      "tags": [
+        "그리드",
+        "레이아웃",
+        "웹"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-10-18"
+    },
+    {
+      "id": "r3",
+      "title": "온보딩 3단계 일러스트",
+      "source": "앱",
+      "imageUrl": "https://picsum.photos/seed/swatch-r3/600/800",
+      "reason": "단계마다 문장이 한 줄뿐이라 읽기 부담이 없다. 진행 점 표시가 위치를 알려 준다.",
+      "tags": [
+        "앱 UI",
+        "레이아웃"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-15"
+    },
+    {
+      "id": "r4",
+      "title": "한글 명조 제목 조판",
+      "source": "포스터",
+      "imageUrl": "https://picsum.photos/seed/swatch-r4/600/800",
+      "reason": "명조 제목과 고딕 본문의 대비가 또렷하다. 자간을 좁힌 제목이 단단해 보인다.",
+      "tags": [
+        "타이포그래피",
+        "포스터"
+      ],
+      "boardId": "b4",
+      "savedAt": "2026-10-12"
+    },
+    {
+      "id": "r5",
+      "title": "라인 아이콘 세트",
+      "source": "앱",
+      "imageUrl": "https://picsum.photos/seed/swatch-r5/600/800",
+      "reason": "선 두께 1.5px로 통일돼 어느 화면에 둬도 튀지 않는다.",
+      "tags": [
+        "아이콘",
+        "앱 UI"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-10"
+    },
+    {
+      "id": "r6",
+      "title": "가격표 카드 비교",
+      "source": "웹",
+      "imageUrl": "https://picsum.photos/seed/swatch-r6/600/800",
+      "reason": "추천 요금제만 테두리를 강조해 시선이 바로 간다. 비교표의 행 높이가 일정하다.",
+      "tags": [
+        "레이아웃",
+        "웹"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-10-08"
+    },
+    {
+      "id": "r7",
+      "title": "전시 포스터 그리드 실험",
+      "source": "포스터",
+      "imageUrl": "https://picsum.photos/seed/swatch-r7/600/800",
+      "reason": "사진을 비대칭 그리드에 흩어 놓아도 기준선이 맞아서 산만하지 않다.",
+      "tags": [
+        "포스터",
+        "그리드"
+      ],
+      "boardId": "b4",
+      "savedAt": "2026-10-05"
+    },
+    {
+      "id": "r8",
+      "title": "하단 탭 + 플로팅 버튼",
+      "source": "앱",
+      "imageUrl": "https://picsum.photos/seed/swatch-r8/600/800",
+      "reason": "가장 자주 쓰는 저장 기능을 엄지 위치에 둔 배치가 편하다.",
+      "tags": [
+        "앱 UI"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-02"
+    },
+    {
+      "id": "r9",
+      "title": "다크 모드 대시보드",
+      "source": "웹",
+      "imageUrl": "https://picsum.photos/seed/swatch-r9/600/800",
+      "reason": "배경과 카드의 명도 차이가 작아도 경계선으로 구분이 잘 된다.",
+      "tags": [
+        "웹",
+        "레이아웃"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-28"
+    },
+    {
+      "id": "r10",
+      "title": "숫자 강조 통계 카드",
+      "source": "앱",
+      "imageUrl": "https://picsum.photos/seed/swatch-r10/600/800",
+      "reason": "큰 숫자 하나 + 작은 설명 한 줄 구성이 한눈에 들어온다.",
+      "tags": [
+        "타이포그래피",
+        "앱 UI"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-25"
+    },
+    {
+      "id": "r11",
+      "title": "손글씨 레터링 포스터",
+      "source": "포스터",
+      "imageUrl": "https://picsum.photos/seed/swatch-r11/600/800",
+      "reason": "손글씨 제목 하나로 분위기를 만들고 나머지는 단순하게 둔 점.",
+      "tags": [
+        "타이포그래피",
+        "포스터"
+      ],
+      "boardId": "b4",
+      "savedAt": "2026-09-20"
+    },
+    {
+      "id": "r12",
+      "title": "검색 결과 빈 화면",
+      "source": "앱",
+      "imageUrl": "https://picsum.photos/seed/swatch-r12/600/800",
+      "reason": "결과가 없을 때 추천 검색어를 바로 보여 줘서 막히지 않는다.",
+      "tags": [
+        "앱 UI"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-09-15"
+    }
+  ],
+  "boards": [
+    {
+      "id": "b1",
+      "name": "랜딩 페이지",
+      "description": "히어로 영역과 첫 화면 구성",
+      "coverUrl": "https://picsum.photos/seed/swatch-landing/600/400"
+    },
+    {
+      "id": "b2",
+      "name": "포트폴리오 리뉴얼",
+      "description": "카드형 프로젝트 목록 참고",
+      "coverUrl": "https://picsum.photos/seed/swatch-portfolio/600/400"
+    },
+    {
+      "id": "b3",
+      "name": "모바일 온보딩",
+      "description": "첫 실행 화면과 안내 문구",
+      "coverUrl": "https://picsum.photos/seed/swatch-onboarding/600/400"
+    },
+    {
+      "id": "b4",
+      "name": "타이포 연습",
+      "description": "한글 제목 조판",
+      "coverUrl": "https://picsum.photos/seed/swatch-type/600/400"
+    },
+    {
+      "id": "b5",
+      "name": "졸업 전시",
+      "description": "아직 모은 레퍼런스가 없는 새 보드",
+      "coverUrl": "https://picsum.photos/seed/swatch-exhibit/600/400"
+    }
+  ],
+  "tags": [
+    {
+      "id": "t1",
+      "name": "타이포그래피"
+    },
+    {
+      "id": "t2",
+      "name": "레이아웃"
+    },
+    {
+      "id": "t3",
+      "name": "포스터"
+    },
+    {
+      "id": "t4",
+      "name": "앱 UI"
+    },
+    {
+      "id": "t5",
+      "name": "웹"
+    },
+    {
+      "id": "t6",
+      "name": "아이콘"
+    },
+    {
+      "id": "t7",
+      "name": "그리드"
+    }
+  ]
+}

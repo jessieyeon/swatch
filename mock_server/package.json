@@ -1,0 +1,10 @@
+{
+  "name": "swatch-mock-server",
+  "private": true,
+  "scripts": {
+    "mock": "json-server --watch db.json --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "0.17.4"
+  }
+}
