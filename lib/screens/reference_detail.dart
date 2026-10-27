@@ -5,6 +5,7 @@
 // │ S2-4 │ Wrap + Chip  │ 태그             │ P06 │
 // │ S2-5 │ ListTile     │ 출처             │ P02 │
 // │ S2-6 │ ListTile     │ 저장한 날         │ P02 │
+// │ S2-7 │ Wrap + Chip  │ 유형 (저장할 때 고른 값) │ P06 │
 import 'package:flutter/material.dart';
 
 import '../models.dart';
@@ -34,14 +35,16 @@ class ReferenceDetail extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       children: [
         // S2-1 레퍼런스 이미지
+        // 가로로 긴 레퍼런스(랜딩 · 대시보드)도 잘리지 않게 원래 비율 그대로 보여 준다
         ClipRRect(
           borderRadius: BorderRadius.circular(12),
-          child: AspectRatio(
-            aspectRatio: 3 / 4,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 520),
             child: Image.network(
                 reference.imageUrl,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
                 errorBuilder: (_, __, ___) => Container(
+                  height: 240,
                   color: scheme.surfaceContainerHighest,
                   child: const Icon(Icons.image_not_supported_outlined),
                 ),
@@ -50,6 +53,22 @@ class ReferenceDetail extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(reference.title, style: t.titleLarge), // S2-2
+        // S2-7 유형 — 저장할 때 AI 추천을 누르거나 직접 쓴 값 (P06)
+        if (reference.types.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final type in reference.types)
+                Chip(
+                  avatar: const Icon(Icons.category_outlined, size: 16),
+                  label: Text(type),
+                  visualDensity: VisualDensity.compact,
+                ),
+            ],
+          ),
+        ],
         const SizedBox(height: 12),
         // S2-3 저장 이유 — P06 왜 저장했는지 이미지 바로 아래에서 보인다
         Card(

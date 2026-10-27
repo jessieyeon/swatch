@@ -1,222 +1,373 @@
 {
   "references": [
     {
-      "id": "r1",
-      "title": "굵은 산세리프 히어로",
-      "source": "포스터",
-      "imageUrl": "https://picsum.photos/seed/swatch-r1/600/800",
-      "reason": "제목 하나만 크게 두고 나머지를 과감히 비운 여백이 좋다. 랜딩 첫 화면에 그대로 쓰고 싶다.",
+      "id": "r01",
+      "title": "One-click for Asset Defense 랜딩",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r01.jpg",
+      "types": [
+        "랜딩페이지"
+      ],
+      "reason": "가로로 긴 로고를 넣고, 세로 방향으로 작은 글씨들을 채운 레이아웃이다. 텅 빈 배경은 그라데이션으로 채웠다. 로고를 중심으로 작은 메뉴들이 반원을 그리며 놓여 있다. ‘One-click for Asset Defense’를 빼면 모두 ‘소’ 요소라서 균형이 맞는다. 버튼이 많은데도 깔끔해 보이는 이유는 정렬이라고 생각한다. 좌우 하단의 버튼(또는 요소)들, 가운데 버튼 두 개와 그 위 버튼까지 모두 정렬이 맞춰져 있다. 세로로 내려오는 선 세 개는 빈 공간을 채우려고 넣은 것 같다. 위에는 재생 버튼이 있지만 아래에는 없기 때문이다.",
       "tags": [
-        "타이포그래피",
         "레이아웃",
-        "웹"
+        "정렬",
+        "그라데이션"
       ],
       "boardId": "b1",
-      "savedAt": "2026-10-20"
+      "savedAt": "2026-09-02"
     },
     {
-      "id": "r2",
-      "title": "12단 그리드 포트폴리오",
-      "source": "웹",
-      "imageUrl": "https://picsum.photos/seed/swatch-r2/600/800",
-      "reason": "카드 간격이 12단 그리드에 정확히 맞아 정돈돼 보인다. 프로젝트 목록 배치 참고.",
+      "id": "r02",
+      "title": "cliff 로고",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r02.jpg",
+      "types": [
+        "로고"
+      ],
+      "reason": "산 모양을 글자와 함께 표현한 점이 마음에 든다. ‘f’의 가로선을 산의 밑동으로 활용해서 ‘cliff’ 글자 전체가 하나의 산처럼 보인다. 폰트 색이 군데군데 보이는 땅의 갈색과 같은 톤이라 조화롭다. 폰트도 산의 울퉁불퉁한 면을 표현할 수 있는 것으로 골랐다.",
       "tags": [
-        "그리드",
+        "타이포그래피",
+        "색감",
+        "브랜딩"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-09-03"
+    },
+    {
+      "id": "r03",
+      "title": "Postgres Professional 랜딩",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r03.jpg",
+      "types": [
+        "랜딩페이지",
+        "마스코트"
+      ],
+      "reason": "브랜드 마스코트가 있을 때 쓰기 좋은 디자인이다. 대: Postgres Professional, 코끼리, 반원 / 중: 옆에 띄워 둔 글씨들(Database 등) / 소: 상단 메뉴바. 메뉴가 많지 않아서 정보를 많이 담을 필요가 없는 브랜드에 어울린다. 색감도 마음에 든다.",
+      "tags": [
+        "브랜딩",
         "레이아웃",
-        "웹"
+        "색감"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-09-05"
+    },
+    {
+      "id": "r04",
+      "title": "RESET 캠페인 페이지",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r04.jpg",
+      "types": [
+        "캠페인",
+        "목업"
+      ],
+      "reason": "목업을 사용한 예시로, 공동체를 보여 줄 때 좋다. 피어멘토단에도 적용해 볼 수 있겠다. 비비드한 색이 배경에 들어가 자칫 눈이 아플 수 있지만, 화면을 분할해서 부담을 줄였다. 청소하는 이미지가 브랜드의 철학을 잘 보여 준다.",
+      "tags": [
+        "색감",
+        "레이아웃",
+        "브랜딩"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-09-08"
+    },
+    {
+      "id": "r05",
+      "title": "Talkie 로고 애니메이션",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r05.jpg",
+      "types": [
+        "로고",
+        "애니메이션"
+      ],
+      "reason": "간단한 애니메이션이라 어디에든 적용하기 쉽다. ‘T’의 각도를 비틀어서 재미를 더했다.",
+      "tags": [
+        "타이포그래피",
+        "브랜딩"
+      ],
+      "boardId": "b1",
+      "savedAt": "2026-09-10"
+    },
+    {
+      "id": "r06",
+      "title": "네잎클로버 표지",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r06.jpg",
+      "types": [
+        "표지"
+      ],
+      "reason": "색감: 전체적으로 뮤트한 색감이라 눈이 편안하다. / 레이아웃: 가운데 두 사람에게 시선이 모이고, 불필요한 주변 사물은 종이로 가렸다. / 폰트: 요술 지팡이 같은 글자가 신비로운 분위기를 준다. / 종이: 하늘색과 파란색이 섞인 질감이 하늘처럼 탁 트인 해방감을 준다.",
+      "tags": [
+        "색감",
+        "레이아웃",
+        "질감"
       ],
       "boardId": "b2",
-      "savedAt": "2026-10-18"
+      "savedAt": "2026-09-14"
     },
     {
-      "id": "r3",
-      "title": "온보딩 3단계 일러스트",
-      "source": "앱",
-      "imageUrl": "https://picsum.photos/seed/swatch-r3/600/800",
-      "reason": "단계마다 문장이 한 줄뿐이라 읽기 부담이 없다. 진행 점 표시가 위치를 알려 준다.",
-      "tags": [
-        "앱 UI",
-        "레이아웃"
-      ],
-      "boardId": "b3",
-      "savedAt": "2026-10-15"
-    },
-    {
-      "id": "r4",
-      "title": "한글 명조 제목 조판",
-      "source": "포스터",
-      "imageUrl": "https://picsum.photos/seed/swatch-r4/600/800",
-      "reason": "명조 제목과 고딕 본문의 대비가 또렷하다. 자간을 좁힌 제목이 단단해 보인다.",
-      "tags": [
-        "타이포그래피",
-        "포스터"
-      ],
-      "boardId": "b4",
-      "savedAt": "2026-10-12"
-    },
-    {
-      "id": "r5",
-      "title": "라인 아이콘 세트",
-      "source": "앱",
-      "imageUrl": "https://picsum.photos/seed/swatch-r5/600/800",
-      "reason": "선 두께 1.5px로 통일돼 어느 화면에 둬도 튀지 않는다.",
-      "tags": [
-        "아이콘",
-        "앱 UI"
-      ],
-      "boardId": "b3",
-      "savedAt": "2026-10-10"
-    },
-    {
-      "id": "r6",
-      "title": "가격표 카드 비교",
-      "source": "웹",
-      "imageUrl": "https://picsum.photos/seed/swatch-r6/600/800",
-      "reason": "추천 요금제만 테두리를 강조해 시선이 바로 간다. 비교표의 행 높이가 일정하다.",
-      "tags": [
-        "레이아웃",
-        "웹"
-      ],
-      "boardId": "b1",
-      "savedAt": "2026-10-08"
-    },
-    {
-      "id": "r7",
-      "title": "전시 포스터 그리드 실험",
-      "source": "포스터",
-      "imageUrl": "https://picsum.photos/seed/swatch-r7/600/800",
-      "reason": "사진을 비대칭 그리드에 흩어 놓아도 기준선이 맞아서 산만하지 않다.",
-      "tags": [
+      "id": "r07",
+      "title": "뿌리 글자 포스터",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r07.jpg",
+      "types": [
         "포스터",
-        "그리드"
+        "타이포그래피"
       ],
-      "boardId": "b4",
-      "savedAt": "2026-10-05"
-    },
-    {
-      "id": "r8",
-      "title": "하단 탭 + 플로팅 버튼",
-      "source": "앱",
-      "imageUrl": "https://picsum.photos/seed/swatch-r8/600/800",
-      "reason": "가장 자주 쓰는 저장 기능을 엄지 위치에 둔 배치가 편하다.",
+      "reason": "뿌리를 글자로 풀어낸 아이디어가 참신하다. 나중에 꽃을 두고 그 뿌리를 지성, 겸손 같은 단어로 채우면 하나의 포스터가 완성될 수 있겠다.",
       "tags": [
-        "앱 UI"
-      ],
-      "boardId": "b3",
-      "savedAt": "2026-10-02"
-    },
-    {
-      "id": "r9",
-      "title": "다크 모드 대시보드",
-      "source": "웹",
-      "imageUrl": "https://picsum.photos/seed/swatch-r9/600/800",
-      "reason": "배경과 카드의 명도 차이가 작아도 경계선으로 구분이 잘 된다.",
-      "tags": [
-        "웹",
-        "레이아웃"
+        "타이포그래피",
+        "아이디어"
       ],
       "boardId": "b2",
-      "savedAt": "2026-09-28"
+      "savedAt": "2026-09-16"
+    },
+    {
+      "id": "r08",
+      "title": "유리 질감 그라데이션 포스터",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r08.jpg",
+      "types": [
+        "포스터",
+        "그래픽"
+      ],
+      "reason": "스테인드글라스 같은 유리 질감을 어떻게 내는지 궁금하다. 오묘한 색 조합이 신비로운 분위기를 준다. 가운데 별만 파란색으로 처리한 점도 재미있다.",
+      "tags": [
+        "질감",
+        "색감"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-18"
+    },
+    {
+      "id": "r09",
+      "title": "Naive Design 표지",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r09.jpg",
+      "types": [
+        "표지",
+        "타이포그래피"
+      ],
+      "reason": "폰트와 웨이트가 다양한데도 조화로워서 흥미롭다. ‘naive’라는 콘셉트에 맞게 드로잉, 종이 질감, 구겨진 배경, 굵은 글씨를 다양하게 써서 정형화되지 않은, 틀에 갇히지 않은 디자인이 완성됐다.",
+      "tags": [
+        "타이포그래피",
+        "질감"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-21"
     },
     {
       "id": "r10",
-      "title": "숫자 강조 통계 카드",
-      "source": "앱",
-      "imageUrl": "https://picsum.photos/seed/swatch-r10/600/800",
-      "reason": "큰 숫자 하나 + 작은 설명 한 줄 구성이 한눈에 들어온다.",
+      "title": "딸기 포스터",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r10.jpg",
+      "types": [
+        "포스터",
+        "일러스트"
+      ],
+      "reason": "갈색과 파란색의 색 배합이 아주 마음에 든다. 파란색 안에 남은 붓질 자국이 포스터를 더 입체적으로 만든다. 딸기 꼭지를 스티커처럼 다양한 크기와 각도로 채운 점, 꼭지 아래 그림자를 파란색으로 칠한 점도 흥미롭다.",
       "tags": [
+        "색감",
+        "질감"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-23"
+    },
+    {
+      "id": "r11",
+      "title": "색 배합 캘리그래피",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r11.jpg",
+      "types": [
+        "캘리그래피"
+      ],
+      "reason": "색 배합이 마음에 드는 캘리그래피다. 글자 안의 질감 표현이 저마다 다른 점도 재미있다.",
+      "tags": [
+        "색감",
         "타이포그래피",
-        "앱 UI"
+        "질감"
       ],
       "boardId": "b2",
       "savedAt": "2026-09-25"
     },
     {
-      "id": "r11",
-      "title": "손글씨 레터링 포스터",
-      "source": "포스터",
-      "imageUrl": "https://picsum.photos/seed/swatch-r11/600/800",
-      "reason": "손글씨 제목 하나로 분위기를 만들고 나머지는 단순하게 둔 점.",
-      "tags": [
-        "타이포그래피",
+      "id": "r12",
+      "title": "3일 강연 이벤트 포스터",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r12.jpg",
+      "types": [
         "포스터"
       ],
-      "boardId": "b4",
-      "savedAt": "2026-09-20"
+      "reason": "상단 레이아웃이 마음에 든다.",
+      "tags": [
+        "레이아웃"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-29"
     },
     {
-      "id": "r12",
-      "title": "검색 결과 빈 화면",
-      "source": "앱",
-      "imageUrl": "https://picsum.photos/seed/swatch-r12/600/800",
-      "reason": "결과가 없을 때 추천 검색어를 바로 보여 줘서 막히지 않는다.",
-      "tags": [
-        "앱 UI"
+      "id": "r13",
+      "title": "돋보기 타이포 포스터",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r13.jpg",
+      "types": [
+        "포스터",
+        "타이포그래피"
       ],
-      "boardId": "b1",
-      "savedAt": "2026-09-15"
+      "reason": "돋보기 안에서 글자가 볼록하게 보이는 표현을 ‘창업’이나 ‘Start Up’ 글자에 응용해 볼 수 있다.",
+      "tags": [
+        "타이포그래피",
+        "아이디어"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-09-30"
+    },
+    {
+      "id": "r14",
+      "title": "대시보드 첫 로딩 화면",
+      "source": "Behance — admin panel dashboard design 검색",
+      "imageUrl": "images/r14.jpg",
+      "types": [
+        "대시보드"
+      ],
+      "reason": "페이지 첫 로딩 화면에 참고할 만하다. 바탕색이 채워지는 방식이 좋다.",
+      "tags": [
+        "레이아웃"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-06"
+    },
+    {
+      "id": "r15",
+      "title": "꽉 찬 대시보드",
+      "source": "Behance — admin panel dashboard design 검색",
+      "imageUrl": "images/r15.jpg",
+      "types": [
+        "대시보드"
+      ],
+      "reason": "화면이 꽉 차 있는 느낌을 준다.",
+      "tags": [
+        "레이아웃"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-07"
+    },
+    {
+      "id": "r16",
+      "title": "새 프로젝트 만들기 화면",
+      "source": "Behance — admin panel dashboard design 검색",
+      "imageUrl": "images/r16.jpg",
+      "types": [
+        "대시보드"
+      ],
+      "reason": "새로운 일을 만들 때의 흐름과 예상되는 오류를 어떻게 보여 줄지 참고하기 좋다.",
+      "tags": [
+        "레이아웃"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-08"
+    },
+    {
+      "id": "r17",
+      "title": "Task 목록 대시보드",
+      "source": "Behance — admin panel dashboard design 검색",
+      "imageUrl": "images/r17.jpg",
+      "types": [
+        "대시보드"
+      ],
+      "reason": "Task가 일렬로 정렬되어 있고, 우선순위에 따라 볼 수도 있다. 하단 그라데이션이 시선을 중앙으로 모아 준다.",
+      "tags": [
+        "정렬",
+        "그라데이션"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-09"
+    },
+    {
+      "id": "r18",
+      "title": "Carhartt 생활 소재 로고",
+      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "imageUrl": "images/r18.jpg",
+      "types": [
+        "로고",
+        "타이포그래피"
+      ],
+      "reason": "다양한 생활 소재를 폰트로 활용한 점이 인상적이다. 소재의 모양이 다양하기 때문에 색감은 최대한 덜어내서 미니멀한 디자인을 유지했다.",
+      "tags": [
+        "타이포그래피",
+        "아이디어"
+      ],
+      "boardId": "b2",
+      "savedAt": "2026-10-01"
     }
   ],
   "boards": [
     {
       "id": "b1",
-      "name": "랜딩 페이지",
-      "description": "히어로 영역과 첫 화면 구성",
-      "coverUrl": "https://picsum.photos/seed/swatch-landing/600/400"
+      "name": "웹사이트 랜딩페이지",
+      "description": "첫 화면 구성 · 로고 · 브랜드 무드",
+      "coverUrl": "images/r04.jpg"
     },
     {
       "id": "b2",
-      "name": "포트폴리오 리뉴얼",
-      "description": "카드형 프로젝트 목록 참고",
-      "coverUrl": "https://picsum.photos/seed/swatch-portfolio/600/400"
+      "name": "포스터",
+      "description": "색 배합 · 질감 · 타이포그래피",
+      "coverUrl": "images/r10.jpg"
     },
     {
       "id": "b3",
-      "name": "모바일 온보딩",
-      "description": "첫 실행 화면과 안내 문구",
-      "coverUrl": "https://picsum.photos/seed/swatch-onboarding/600/400"
+      "name": "시각화 방법",
+      "description": "대시보드 · 데이터 화면 정리",
+      "coverUrl": "images/r15.jpg"
     },
     {
       "id": "b4",
-      "name": "타이포 연습",
-      "description": "한글 제목 조판",
-      "coverUrl": "https://picsum.photos/seed/swatch-type/600/400"
-    },
-    {
-      "id": "b5",
-      "name": "졸업 전시",
-      "description": "아직 모은 레퍼런스가 없는 새 보드",
-      "coverUrl": "https://picsum.photos/seed/swatch-exhibit/600/400"
+      "name": "브랜딩",
+      "description": "아직 이유를 남긴 레퍼런스가 없어요",
+      "coverUrl": ""
     }
   ],
   "tags": [
     {
       "id": "t1",
-      "name": "타이포그래피"
-    },
-    {
-      "id": "t2",
       "name": "레이아웃"
     },
     {
+      "id": "t2",
+      "name": "정렬"
+    },
+    {
       "id": "t3",
-      "name": "포스터"
+      "name": "그라데이션"
     },
     {
       "id": "t4",
-      "name": "앱 UI"
+      "name": "타이포그래피"
     },
     {
       "id": "t5",
-      "name": "웹"
+      "name": "색감"
     },
     {
       "id": "t6",
-      "name": "아이콘"
+      "name": "브랜딩"
     },
     {
       "id": "t7",
-      "name": "그리드"
+      "name": "질감"
+    },
+    {
+      "id": "t8",
+      "name": "아이디어"
+    }
+  ],
+  "aiTypeSuggestions": [
+    {
+      "id": "s1",
+      "type": "포스터"
+    },
+    {
+      "id": "s2",
+      "type": "타이포그래피"
     }
   ]
 }

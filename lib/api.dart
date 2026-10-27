@@ -19,6 +19,13 @@ const apiBase = String.fromEnvironment(
 /// 예) flutter run -d chrome --dart-define=DEMO_STATE=error
 const demoState = String.fromEnvironment('DEMO_STATE');
 
+/// db.json의 이미지 경로(images/r01.jpg)를 json-server 주소로 바꾼다.
+/// 이미지는 mock_server/public/images에 있고, json-server가 같은 주소에서 내려 준다.
+String imageUrlOf(String path) {
+  if (path.isEmpty || path.startsWith('http')) return path;
+  return '$apiBase/$path';
+}
+
 Future<List<dynamic>> _getList(String path) async {
   if (demoState == 'slow') {
     await Future.delayed(const Duration(seconds: 2));
@@ -76,4 +83,11 @@ Future<List<Board>> fetchBoards() async {
 Future<List<String>> fetchTags() async {
   final list = await _getList('tags');
   return list.map((e) => (e as Map<String, dynamic>)['name'] as String).toList();
+}
+
+/// S-3 저장 시트의 유형 AI 추천 (GET /aiTypeSuggestions)
+/// 실제 이미지 분석이 아니라 db.json에 미리 써 둔 가짜 응답이다 (셀프 논증 쟁점 4).
+Future<List<String>> fetchTypeSuggestions() async {
+  final list = await _getList('aiTypeSuggestions');
+  return list.map((e) => (e as Map<String, dynamic>)['type'] as String).toList();
 }

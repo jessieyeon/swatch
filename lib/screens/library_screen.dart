@@ -1,7 +1,7 @@
 // S-1 보관함 (홈) — 요소 번호는 docs/디자인가이드.md와 같다
 // │ S1-1  │ TextField (검색)                    │ 보관함 검색          │ P06 │
 // │ S1-2  │ FilterChip 목록                      │ 태그 칩              │ P06 │
-// │ S1-3  │ GridView + Card                      │ 레퍼런스 카드         │ P08 · P06 │
+// │ S1-3  │ GridView + Card + Image              │ 레퍼런스 카드 (사진만) │ P08 │
 // │ S1-4  │ Card 길게 누르기 + CircleAvatar 체크   │ 선택 모드            │ P07 │
 // │ S1-5  │ BottomAppBar + TextButton            │ 정리 액션바           │ P07 · P03 │
 // │ S1-6  │ CircularProgressIndicator · ErrorView · EmptyView │ 3상태 │ P01 · P09 │
@@ -229,7 +229,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
             textInputAction: TextInputAction.search,
             onSubmitted: _openSearch,
             decoration: InputDecoration(
-              hintText: '저장 이유나 태그로 찾기 (예: 여백, 그리드)',
+              hintText: '저장 이유나 태그로 찾기',
               prefixIcon: const Icon(Icons.search),
               suffixIcon: IconButton(
                 tooltip: '검색',
@@ -293,7 +293,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 return EmptyView(
                   icon: Icons.collections_bookmark_outlined,
                   title: _tag == null ? '아직 모은 레퍼런스가 없어요' : '‘$_tag’ 태그의 레퍼런스가 없어요',
-                  message: '마음에 드는 디자인을 저장하면서 좋은 이유를 한 줄 남겨 보세요.',
+                  message: '마음에 드는 디자인을 저장하면서 좋은 이유를 남겨 보세요.',
                   actions: [
                     FilledButton.icon(
                       onPressed: () => showSaveSheet(context),
@@ -308,7 +308,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   ],
                 );
               }
-              // S1-3 레퍼런스 카드 — P08 내가 저장한 것만 (추천 · 광고 없음)
+              // S1-3 레퍼런스 카드 — 사진만 (P08), 내가 저장한 것만 (추천 · 광고 없음)
               return ReferenceGrid(
                 items: items,
                 itemBuilder: (context, r) => ReferenceCard(

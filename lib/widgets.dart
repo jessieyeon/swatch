@@ -108,8 +108,8 @@ class EmptyView extends StatelessWidget {
   }
 }
 
-/// S1-3 레퍼런스 카드 — 이미지 → 저장 이유 한 줄 → 태그 (정보 전달 기준)
-/// P08 내가 저장한 것만 보인다(추천 · 광고 없음) · P06 이미지 대신 이유로 기억한다
+/// S1-3 레퍼런스 카드 — 사진만 보여 준다 (제목 · 이유 · 태그는 S-2 상세에서)
+/// P08 내가 저장한 것만, 군더더기 없이 사진으로 훑어본다
 class ReferenceCard extends StatelessWidget {
   const ReferenceCard({
     super.key,
@@ -131,7 +131,6 @@ class ReferenceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final t = Theme.of(context).textTheme;
     return Card(
       clipBehavior: Clip.antiAlias,
       elevation: 0,
@@ -156,6 +155,7 @@ class ReferenceCard extends StatelessWidget {
                   Image.network(
                       reference.imageUrl,
                       fit: BoxFit.cover,
+                      semanticLabel: reference.title, // 글자가 없어도 화면 낭독기에는 제목을 읽어 준다
                       errorBuilder: (_, __, ___) => Container(
                         color: scheme.surfaceContainerHighest,
                         child: const Icon(Icons.image_not_supported_outlined),
@@ -176,29 +176,6 @@ class ReferenceCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 8, 10, 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(reference.title,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: t.titleSmall),
-                  const SizedBox(height: 2),
-                  // 저장 이유 한 줄 미리보기 (P06)
-                  Text(reference.reason,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: t.bodySmall),
-                  const SizedBox(height: 6),
-                  Text(reference.tags.map((e) => '#$e').join(' '),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: t.labelSmall?.copyWith(color: scheme.primary)),
                 ],
               ),
             ),
@@ -229,7 +206,7 @@ class ReferenceGrid extends StatelessWidget {
           crossAxisCount: columns,
           mainAxisSpacing: 12,
           crossAxisSpacing: 12,
-          childAspectRatio: 0.62,
+          childAspectRatio: 0.75,
         ),
         itemCount: items.length,
         itemBuilder: (context, i) => itemBuilder(context, items[i]),
