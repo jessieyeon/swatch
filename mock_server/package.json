@@ -2,9 +2,11 @@
   "name": "swatch-mock-server",
   "private": true,
   "scripts": {
-    "mock": "json-server --watch db.json --port 3000"
+    "start": "json-server --watch db.json --port 3000 --host 0.0.0.0",
+    "mock": "json-server --watch db.json --port 3000 --host 0.0.0.0"
   },
   "dependencies": {
     "json-server": "0.17.4"
-  }
+  },
+  "description": "스와치 v2 목업 서버 (json-server 0.17.4, 앱은 GET만 사용)"
 }

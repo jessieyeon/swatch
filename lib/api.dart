@@ -3,19 +3,26 @@
 // 검색 · 태그 필터 · 보드별 목록은 json-server의 GET 쿼리(q, tags_like, boardId)로 처리한다.
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import 'models.dart';
 
-/// 주소는 실행할 때 넘긴다.
-/// Chrome · macOS: 기본값 http://localhost:3000
-/// Android 에뮬레이터: --dart-define=API_BASE=http://10.0.2.2:3000
-const apiBase = String.fromEnvironment(
-  'API_BASE',
-  defaultValue: 'http://localhost:3000',
-);
+const _apiBaseOverride = String.fromEnvironment('API_BASE');
 
-/// 발표 데모용 상태 스위치: slow(2초 로딩) · error(오류) · empty(빈 상태)
+/// json-server 주소. API_BASE를 넘기면 그 값, 아니면 실행 대상에 맞는 기본값.
+/// Chrome · macOS · iOS 시뮬레이터: http://localhost:3000
+/// Android 에뮬레이터: http://10.0.2.2:3000 (에뮬레이터 안의 localhost는 에뮬레이터 자신)
+/// 실기기 · 배포: --dart-define=API_BASE=<주소>
+String get apiBase {
+  if (_apiBaseOverride.isNotEmpty) return _apiBaseOverride;
+  if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
+    return 'http://10.0.2.2:3000';
+  }
+  return 'http://localhost:3000';
+}
+
+/// 발표 데모용 상태 스위치: loading(=slow, 2초 로딩) · error(오류) · empty(빈 상태)
 /// 예) flutter run -d chrome --dart-define=DEMO_STATE=error
 const demoState = String.fromEnvironment('DEMO_STATE');
 
@@ -27,7 +34,7 @@ String imageUrlOf(String path) {
 }
 
 Future<List<dynamic>> _getList(String path) async {
-  if (demoState == 'slow') {
+  if (demoState == 'slow' || demoState == 'loading') {
     await Future.delayed(const Duration(seconds: 2));
   }
   if (demoState == 'error') {
