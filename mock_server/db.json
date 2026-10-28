@@ -3,7 +3,7 @@
     {
       "id": "r01",
       "title": "One-click for Asset Defense 랜딩",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r01.jpg",
       "types": [
         "랜딩페이지"
@@ -20,7 +20,7 @@
     {
       "id": "r02",
       "title": "cliff 로고",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r02.jpg",
       "types": [
         "로고"
@@ -37,7 +37,7 @@
     {
       "id": "r03",
       "title": "Postgres Professional 랜딩",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r03.jpg",
       "types": [
         "랜딩페이지",
@@ -55,7 +55,7 @@
     {
       "id": "r04",
       "title": "RESET 캠페인 페이지",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r04.jpg",
       "types": [
         "캠페인",
@@ -73,7 +73,7 @@
     {
       "id": "r05",
       "title": "Talkie 로고 애니메이션",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r05.jpg",
       "types": [
         "로고",
@@ -90,7 +90,7 @@
     {
       "id": "r06",
       "title": "네잎클로버 표지",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r06.jpg",
       "types": [
         "표지"
@@ -107,7 +107,7 @@
     {
       "id": "r07",
       "title": "뿌리 글자 포스터",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r07.jpg",
       "types": [
         "포스터",
@@ -124,7 +124,7 @@
     {
       "id": "r08",
       "title": "유리 질감 그라데이션 포스터",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r08.jpg",
       "types": [
         "포스터",
@@ -141,7 +141,7 @@
     {
       "id": "r09",
       "title": "Naive Design 표지",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r09.jpg",
       "types": [
         "표지",
@@ -158,7 +158,7 @@
     {
       "id": "r10",
       "title": "딸기 포스터",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r10.jpg",
       "types": [
         "포스터",
@@ -175,7 +175,7 @@
     {
       "id": "r11",
       "title": "색 배합 캘리그래피",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r11.jpg",
       "types": [
         "캘리그래피"
@@ -192,7 +192,7 @@
     {
       "id": "r12",
       "title": "3일 강연 이벤트 포스터",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r12.jpg",
       "types": [
         "포스터"
@@ -207,7 +207,7 @@
     {
       "id": "r13",
       "title": "돋보기 타이포 포스터",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r13.jpg",
       "types": [
         "포스터",
@@ -238,13 +238,13 @@
     },
     {
       "id": "r15",
-      "title": "꽉 찬 대시보드",
+      "title": "꽉 찬데도 정돈된 대시보드",
       "source": "Behance — admin panel dashboard design 검색",
       "imageUrl": "images/r15.jpg",
       "types": [
         "대시보드"
       ],
-      "reason": "화면이 꽉 차 있는 느낌을 준다.",
+      "reason": "대시보드가 꽉 차 있는데도 시선이 분산되지 않는 점이 인상적이다. 라운드 형태의 카드와 계층적인 구조를 잘 사용한 예시다.",
       "tags": [
         "레이아웃"
       ],
@@ -285,7 +285,7 @@
     {
       "id": "r18",
       "title": "Carhartt 생활 소재 로고",
-      "source": "Figma ‘레퍼런스 모으기’ (원출처 미기록)",
+      "source": "Pinterest",
       "imageUrl": "images/r18.jpg",
       "types": [
         "로고",
@@ -298,6 +298,39 @@
       ],
       "boardId": "b2",
       "savedAt": "2026-10-01"
+    },
+    {
+      "id": "r19",
+      "title": "Navexa 자동차 대시보드",
+      "source": "Pinterest",
+      "imageUrl": "images/r19.jpg",
+      "types": [
+        "대시보드"
+      ],
+      "reason": "자동차 이미지를 중심으로 관련 내용을 가독성 높게 배치했다. 오른쪽 메뉴바는 글자와 배경이 모두 회색이라 잘 안 보인다고 생각할 수 있지만, 원래 내용이 많은 페이지라 글자 색으로 중요도를 나눈 것으로 보인다.",
+      "tags": [
+        "레이아웃",
+        "색감"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-10"
+    },
+    {
+      "id": "r20",
+      "title": "그라데이션 카드 3종",
+      "source": "Pinterest",
+      "imageUrl": "images/r20.jpg",
+      "types": [
+        "그래픽",
+        "카드 UI"
+      ],
+      "reason": "그라데이션 활용에 참고하기 좋다.",
+      "tags": [
+        "그라데이션",
+        "색감"
+      ],
+      "boardId": "b3",
+      "savedAt": "2026-10-11"
     }
   ],
   "boards": [

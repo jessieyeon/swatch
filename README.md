@@ -28,7 +28,7 @@ npm run mock          # http://localhost:3000  (GET만 사용)
 curl http://localhost:3000/references
 ```
 
-목업 데이터(`mock_server/db.json`): 은서가 Figma ‘레퍼런스 모으기’에 모아 둔 레퍼런스 18개와 그때 적어 둔 저장 이유(문장만 다듬음), 보드 4개(‘브랜딩’은 빈 상태 시연용), 태그 8개, 유형 AI 추천 가짜 응답(`/aiTypeSuggestions`). 이미지는 `mock_server/public/images/`에 있고 json-server가 같은 주소(`http://localhost:3000/images/r01.jpg`)로 내려 준다. 이미지는 수업 시연용 레퍼런스이며 저작권은 각 원작자에게 있다.
+목업 데이터(`mock_server/db.json`): 은서가 Figma ‘레퍼런스 모으기’에 모아 둔 레퍼런스 20개와 그때 적어 둔 저장 이유(문장만 다듬음), 보드 4개(‘브랜딩’은 빈 상태 시연용), 태그 8개, 유형 AI 추천 가짜 응답(`/aiTypeSuggestions`). 이미지는 `mock_server/public/images/`에 있고 json-server가 같은 주소(`http://localhost:3000/images/r01.jpg`)로 내려 준다. 이미지 출처: Pinterest (r14–r17 네 장은 Behance). 수업 시연용 레퍼런스이며 저작권은 각 원작자에게 있다.
 
 터미널 2 — 앱 (처음 한 번은 플랫폼 폴더를 만든다)
 
@@ -48,7 +48,34 @@ flutter run -d chrome --dart-define=DEMO_STATE=error   # 오류 + 다시 시도
 flutter run -d chrome --dart-define=DEMO_STATE=empty   # 빈 상태
 ```
 
+## 배포 (Vercel)
+
+데이터는 GET만 쓰므로 목업 서버도 읽기 전용으로 배포한다. 두 프로젝트로 나눈다.
+
+1. 목업 서버 — `mock_server/api/index.js`가 같은 `db.json`을 json-server로 내려 준다. `readOnly: true`라 POST · PUT · DELETE는 403으로 막힌다.
+
+   ```bash
+   cd mock_server
+   npx vercel --prod          # 처음이면 로그인 · 프로젝트 이름(예: swatch-api)을 묻는다
+   curl https://<api 주소>/references?q=미니멀
+   ```
+
+2. 앱 — Flutter 웹을 로컬에서 빌드해 정적 파일만 올린다.
+
+   ```bash
+   flutter build web --release --dart-define=API_BASE=https://<api 주소>
+   cd build/web
+   npx vercel --prod          # 프로젝트 이름(예: swatch)
+   ```
+
+배포 URL: (배포 후 적기)
+
+
 ## 화면 목록 (기획 노트 5단계와 같은 번호)
+
+![메뉴 구성도](docs/메뉴구성도.png)
+
+메뉴 구성도: AI가 화면 목록 초안 작성 → 은서 검토·확정 (Figma ‘스와치 v2 메뉴 구성도’).
 
 | 번호 | 비즈니스 명칭 | 파일 | 전환 | GET |
 | --- | --- | --- | --- | --- |

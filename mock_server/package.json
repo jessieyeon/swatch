@@ -4,7 +4,7 @@
   "scripts": {
     "mock": "json-server --watch db.json --port 3000"
   },
-  "devDependencies": {
+  "dependencies": {
     "json-server": "0.17.4"
   }
 }

@@ -23,9 +23,28 @@ class SwatchApp extends StatelessWidget {
     return MaterialApp(
       title: '스와치',
       debugShowCheckedModeBanner: false,
+      // 배경은 흰색으로 통일 — 이미지 색이 배경 색에 섞이지 않고 그대로 보이게 한다.
+      // 화면 · 제목 줄 · 탭 · 아래 시트 · 대화상자 · 카드가 쓰는 surface 계열을 모두 흰색으로 둔다.
+      // (검색창 · 빈 커버가 쓰는 surfaceContainerHighest만 연한 회색으로 남겨 구분한다)
       theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF2F5BD3),
         useMaterial3: true,
+        // 한글 글꼴(Noto Sans KR)을 앱에 넣어 쓴다 — 칩 · 버튼 글씨가 잘리지 않게
+        fontFamily: 'NotoSansKR',
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF2F5BD3),
+          surface: Colors.white,
+          surfaceContainerLowest: Colors.white,
+          surfaceContainerLow: Colors.white,
+          surfaceContainer: Colors.white,
+          surfaceContainerHigh: Colors.white,
+          surfaceTint: Colors.transparent,
+        ),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
+          scrolledUnderElevation: 0,
+        ),
       ),
       home: const AppShell(),
     );
