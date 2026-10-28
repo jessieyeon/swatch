@@ -189,7 +189,7 @@ git diff v1-plan..HEAD --stat
 
 ## 6. 데모 영상 · 배포
 
-- 데모 영상 1분: https://youtu.be/gx2-YEAUiAY — 보관함 → 태그 칩 → 저장 시트(이유 입력) → 저장 알림 → ‘미니멀’ 검색 → 상세 → 선택 모드 → 보드로 옮기기 → 빈 보드 → 넓은 화면 2단 (장면별 시간은 `docs/데모시나리오.md`)
+- 데모 영상 1분: https://youtu.be/gx2-YEAUiAY — 보관함 → 태그 칩 → 저장 시트(이유 입력) → 저장 알림 → ‘미니멀’ 검색 → 상세 → 선택 모드 → 보드로 옮기기 → 빈 보드 → 넓은 화면 2단 (장면별 실제 시간은 `docs/데모시나리오.md` 맨 위 표)
 - 배포 URL: 앱 https://swatch-app-kappa.vercel.app · 데이터(GET만) https://swatch-mockserver.vercel.app
 - 배포 방법: 목업 서버는 Vercel에서 Root Directory `mock_server`로 Import, 앱은 아래처럼 빌드해 `build/web`을 올립니다.
 
