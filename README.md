@@ -68,7 +68,7 @@ flutter run -d chrome --dart-define=DEMO_STATE=empty   # 빈 상태
    npx vercel --prod          # 프로젝트 이름(예: swatch)
    ```
 
-배포 URL: (배포 후 적기)
+배포 URL: 앱 https://swatch-app-kappa.vercel.app · 데이터(GET만) https://swatch-mockserver.vercel.app
 
 
 ## 화면 목록 (기획 노트 5단계와 같은 번호)
@@ -96,6 +96,7 @@ flutter run -d chrome --dart-define=DEMO_STATE=empty   # 빈 상태
 ## 데모
 
 - 데모 영상 1분: https://youtu.be/gx2-YEAUiAY
+- 배포: https://swatch-app-kappa.vercel.app
 
 ## AI 사용
 
