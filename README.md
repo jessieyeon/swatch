@@ -71,11 +71,10 @@ flutter run -d chrome --dart-define=DEMO_STATE=empty   # 빈 상태
 배포 URL: 앱 https://swatch-app-kappa.vercel.app · 데이터(GET만) https://swatch-mockserver.vercel.app
 
 
-## 화면 목록 (기획 노트 5단계와 같은 번호)
+## 화면 목록 
 
 ![메뉴 구성도](docs/메뉴구성도.png)
 
-메뉴 구성도: AI가 화면 목록 초안 작성 → 은서 검토·확정 (Figma ‘스와치 v2 메뉴 구성도’).
 
 | 번호 | 비즈니스 명칭 | 파일 | 전환 | GET |
 | --- | --- | --- | --- | --- |
